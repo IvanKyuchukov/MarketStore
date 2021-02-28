@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace MarketStore
 {
     public class Purchase
-    {
+    {        
         private double turnover;
         private double value;
         private double discount;
         private String card;
 
+        //get and set
         public double getValue()
         {
             return value;
@@ -43,16 +44,19 @@ namespace MarketStore
             card = cd;
         }
 
+        //Calculate the discount of the order
         public double DiscountCalculation()
         {
             return value * discount/100;
         }
 
+        //Calculate the price with the discount
         public double Total()
         {
             return value - DiscountCalculation();
         }
 
+        //Set the discount rate
         public void SetDiscount()
         {
             switch (card)
