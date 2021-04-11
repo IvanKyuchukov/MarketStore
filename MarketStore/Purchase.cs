@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MarketStore
 {
+    //T
     public class Purchase
-    {        
+    {
+        private int i;
         private double turnover;
         private double value;
         private double discount;
